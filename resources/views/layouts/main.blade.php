@@ -10,6 +10,8 @@
     @vite('resources/css/app.css')
     
     <title>Document</title>
+
+    @livewireStyles
 </head>
 <body class="font-sans bg-gray-900 text-white">
     <nav class="border-b border-gray-800">
@@ -30,12 +32,7 @@
             </ul>
 
             <div class="flex flex-col md:flex-row items-center mt-3 md:mt-0">
-                <div class="relative">
-                    <input type="text" class="bg-gray-800 rounded-full w-64 px-4 py-1 pl-10" placeholder="Search">
-                    <div class="absolute top-0 flex items-center h-full pl-2 ">
-                        <span class="material-symbols-outlined text-xl">search</span>
-                    </div>
-                </div>
+                <livewire:search-dropdown>
                 <div class="md:ml-4 mt-3 md:mt-0">
                     <a href="{{ route('movies.index') }}">
                         <img src="img/avatar.png" alt="avatar" class="w-8 h-8">
@@ -45,5 +42,6 @@
         </div>
     </nav>
     @yield('content')
+    @livewireScripts
 </body>
 </html>
