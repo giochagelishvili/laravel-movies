@@ -7,28 +7,31 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     
+    
+
     @vite('resources/css/app.css')
     
     <title>Document</title>
 
     @livewireStyles
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://kit.fontawesome.com/0870a55fea.js" crossorigin="anonymous"></script>    
 </head>
 <body class="font-sans bg-gray-900 text-white">
     <nav class="border-b border-gray-800">
         <div class="container mx-auto px-4 lg:px-24 flex flex-col md:flex-row items-center justify-between py-6">
             <ul class="flex flex-col md:flex-row items-center">
                 <li>
-                    <a href="/">MovieApp</a>
+                    <a href="{{ route('movies.index') }}">MovieApp</a>
                 </li>
                 <li class="md:ml-16">
-                    <a href="/" class="hover:text-gray-300">Movies</a>
+                    <a href="{{ route('movies.index') }}" class="hover:text-gray-300">Movies</a>
                 </li>
                 <li class="md:ml-6">
                     <a href="#" class="hover:text-gray-300">TV Shows</a>
                 </li>
                 <li class="md:ml-6">
-                    <a href="#" class="hover:text-gray-300">Actors</a>
+                    <a href="{{ route('actors.index') }}" class="hover:text-gray-300">Actors</a>
                 </li>
             </ul>
 
@@ -44,5 +47,6 @@
     </nav>
     @yield('content')
     @livewireScripts
+    @yield('scripts')
 </body>
 </html>
