@@ -1,9 +1,9 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="movie-info border-b border-gray-800">
-        <div class="container mx-auto px-4 lg:px-24 py-16 flex flex-col md:flex-row">
-            <div class="flex-none">
+    <div class="movie-info border-b border-gray-800 mt-12 px-8">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row">
+            <div class="md:flex-1">
                 <img src="{{ $actor['profile_path'] }}" alt="actor image" class="w-76">
                 <ul class="flex items-center mt-4">
                     <li>
@@ -27,7 +27,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="md:ml-24">
+            <div class="md:ml-24" style="width: 70vw;">
                 <h2 class="text-4xl font-semibold">
                     {{ $actor['name'] }}
                 </h2>
@@ -50,10 +50,10 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
                     @foreach ($knownForMovies as $movie)
                     <div class="mt-4">
-                        <a href="{{ route('movies.show', $movie['id']) }}">
+                        <a href="{{ $movie['linkToPage'] }}">
                             <img src="{{ $movie['poster_path'] }}" alt="movie poster" class="hover:opacity-75 transition ease-in-out duration-150">
 
-                            <a href="#" class="text-sm leading-normal block text-gray-400 hover:text-white mt-1 transition ease-in-out duration-150">
+                            <a href="{{ $movie['linkToPage'] }}" class="text-sm leading-normal block text-gray-400 hover:text-white mt-1 transition ease-in-out duration-150">
                                 {{ $movie['title'] }}
                             </a>
                         </a>
