@@ -19,3 +19,15 @@
 <h1>Preview: </h1>
 
 ![Screenshot](readme-img/index.webp)
+
+<hr/>
+
+![Screenshot](readme-img/tv-shows.webp)
+
+<hr/>
+
+![Screenshot](readme-img/tv-show.webp)
+
+<hr/>
+
+![Screenshot](readme-img/actor.webp)
