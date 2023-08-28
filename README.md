@@ -15,3 +15,7 @@
         Start the server: php artisan serve
     </li>
 </ul>
+
+<h1>Preview: </h1>
+
+![Screenshot](readme-img/index.webp)
